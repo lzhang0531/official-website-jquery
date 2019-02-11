@@ -1584,3 +1584,43 @@ footer .payment-methods i:hover {
   text-align: center;
   z-index: 9999999;
 }
+.ui-accordion .ui-accordion-content {
+  padding-left: 70px;
+  background-color: #eee;
+  margin-top: -8px;
+}
+.ui-accordion .ui-accordion-header {
+ border: 1px solid #eee;
+}
+.ui-accordion .ui-accordion-header:focus,.ui-accordion .ui-accordion-header.ui-state-active,.ui-accordion .ui-accordion-header.ui-state-hover,.ui-accordion .ui-accordion-header.ui-state-focus{
+  border: 1px solid #1B86CA;
+}
+/*.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: none;
+  border-bottom: 1px solid #2e8eda;
+  background: none;
+  font-weight: normal;
+  color: #2e8eda;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  border: none;
+  border-bottom: 1px solid #c5c5c5;
+  background: #fff;
+  font-weight: normal;
+  color: #454545;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+  border: none;
+  border-bottom: 1px solid #2e8eda;
+   background: none;
+   font-weight: normal;
+   color: #2e8eda;
+}
+
+.ui-widget-content {
+  border: none;
+  background: #ffffff;
+  color: #333333;
+}*/
