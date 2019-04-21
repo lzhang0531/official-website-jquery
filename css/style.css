@@ -1624,3 +1624,83 @@ footer .payment-methods i:hover {
   background: #ffffff;
   color: #333333;
 }*/
+
+.tab-triangle-scroll img{
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #333;
+  width: 70px;
+  height: 70px;
+}
+.tab-triangle-scroll ul{
+  padding: 0;
+}
+.tab-triangle-scroll .scrollNav {
+  margin-left: 60px;
+   padding: 0;
+}
+ .tab-triangle-scroll li {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+  margin-right: 15px;
+ }
+.tab-triangle-scroll li:focus img,.tab-triangle-scroll li.focus img {
+  box-shadow:1px 1px 3px  #4A90E2;
+}
+
+.tab-triangle li:focus .hover-triangle, .tab-triangle-scroll li:focus .hover-triangle, .tab-triangle li.focus .hover-triangle, .tab-triangle-scroll li.focus .hover-triangle, .tab-triangle li:hover .hover-triangle, .tab-triangle-scroll li:hover .hover-triangle {
+  /*display: block; */
+}
+
+.tab-triangle-scroll {
+  position: relative;
+}
+.tab-triangle-scroll .scrollNav {
+  overflow: hidden;
+  display: inline-block; }
+.tab-triangle-scroll .icon_moveLf, .tab-triangle-scroll .icon_moveRt {
+  position: absolute;
+  height: 80px;
+  padding-top: 30px;
+  z-index: 999;
+  width: 60px;
+  background-color: #fff;
+ }
+.tab-triangle-scroll .icon_moveRt {
+  right: 0px;
+  padding-right: 10px;
+  top: 0;}
+.tab-triangle-scroll .icon_moveLf {
+  left: 0px;
+  padding-left: 30px;
+  top: 0;}
+.tab-triangle-scroll ul {
+  padding-left: 1px;
+  border-bottom: none;
+  height: 80px;
+  white-space: nowrap;
+  width: 10000000px; }
+
+#scrollNav1{
+  margin-top: 10px;
+}
+#scrollNav1 img{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+#scrollNav1 span {
+  width: 20px;
+  margin: 0;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  display: inline-block;
+}
+
+.view-block{
+  width:243px;height:243px;position:relative;margin:0 auto;
+}
+.view-block img{
+  width:243px;height:243px
+}
