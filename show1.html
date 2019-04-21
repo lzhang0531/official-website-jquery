@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美缝效果展示</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .two-col-layout .main-right {float: left;width: 450px;display: inline-block;}
+        .two-col-layout .aside-left {margin-left: 450px;}
+    </style>
+</head>
+<body>
+<div class="two-col-layout padding-top-40">
+    <div class="main-right">
+        <div class="text-center margin-bottom-20">
+            选择砖块和颜色可预览美缝效果
+        </div>
+        <div >
+            <div class="view-block">
+                <img class="img_1" src="">
+                <img class="img_2" src="" style="position:absolute;left:0;top:0">
+            </div>
+        </div>
+    </div>
+    <div class="aside-left">
+        <div class="text-center margin-bottom-20 padding-top-40">
+            左右滑动可切换更多
+        </div>
+        <div class="tab-triangle-scroll">
+            <i class="fa fa-chevron-left icon_moveLf" onclick="moveLeft()"></i>
+            <div id="scrollNav" class="scrollNav">
+                <ul>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="img/show/5.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <i class="fa fa-chevron-right icon_moveRt" onclick="moveRight()"></i>
+        </div>
+        <div class="tab-triangle-scroll">
+            <i class="fa fa-chevron-left icon_moveLf" onclick="moveLeft1()"></i>
+            <div id="scrollNav1" class="scrollNav">
+                <ul>
+                    <li>
+                        <img src="img/show/color/1.png" alt="" type="img/show/slide/1.png">
+                        <span>纯白色</span>
+                    </li>
+                    <li>
+                        <img src="img/show/color/3.png" alt="" type="img/show/slide/3.png">
+                        <span>水晶银</span>
+                    </li>
+                    <li>
+                        <img src="img/show/color/5.png" alt="" type="img/show/slide/5.png">
+                        <span>柔光金</span>
+                    </li>
+                </ul>
+            </div>
+            <i class="fa fa-chevron-right icon_moveRt" onclick="moveRight1()"></i>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script>
+    var srollLength = 90;//滚动距离
+    var totalLi = $("#scrollNav").find("li").length * 90
+    var totalLi1 = $("#scrollNav1").find("li").length * 90
+    $(function () {
+        $("#scrollNav,#scrollNav1").css("width", $(".main-left").width() - 60);
+        $("#scrollNav li").on("click", function () {
+            $(".img_1").attr("src",$(this).find("img").attr("src"))
+        }).eq(0).click();
+        $("#scrollNav1 li").on("click", function () {
+            $(".img_2").attr("src",$(this).find("img").attr("type"))
+        }).eq(0).click();
+    });
+
+    function moveRight() {
+        var scrollLeft = document.getElementById("scrollNav").scrollLeft;
+        if (totalLi - scrollLeft > $("#scrollNav").width() + srollLength) {
+            document.getElementById("scrollNav").scrollLeft += srollLength;
+        } else if (totalLi - scrollLeft > $("#scrollNav").width() && totalLi - scrollLeft < $("#scrollNav").width() + srollLength) {
+            document.getElementById("scrollNav").scrollLeft = totalLi - $("#scrollNav").width() + 40;
+        } else {
+            alert("已滑动到最右边");
+            return false
+        }
+    }
+
+    function moveLeft() {
+        var scrollLeft = document.getElementById("scrollNav").scrollLeft;
+        if (scrollLeft == 0) {
+            alert("已滑动到最左边");
+            return false
+        } else if (scrollLeft < srollLength) {
+            document.getElementById("scrollNav").scrollLeft = 0;
+        } else {
+            document.getElementById("scrollNav").scrollLeft -= srollLength;
+        }
+    }
+
+    function moveRight1() {
+        var scrollLeft = document.getElementById("scrollNav1").scrollLeft;
+        if (totalLi1 - scrollLeft > $("#scrollNav1").width() + srollLength) {
+            document.getElementById("scrollNav1").scrollLeft += srollLength;
+        } else if (totalLi1 - scrollLeft > $("#scrollNav1").width() && totalLi1 - scrollLeft < $("#scrollNav1").width() + srollLength) {
+            document.getElementById("scrollNav1").scrollLeft = totalLi1 - $("#scrollNav1").width() + 40;
+        } else {
+            alert("已滑动到最右边");
+            return false
+        }
+    }
+
+    function moveLeft1() {
+        var scrollLeft = document.getElementById("scrollNav1").scrollLeft;
+        if (scrollLeft == 0) {
+            alert("已滑动到最左边");
+            return false
+        } else if (scrollLeft < srollLength) {
+            document.getElementById("scrollNav1").scrollLeft = 0;
+        } else {
+            document.getElementById("scrollNav1").scrollLeft -= srollLength;
+        }
+    }
+</script>
+</body>
+</html>

@@ -94,16 +94,16 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script>
     var srollLength = 90;//滚动距离
-    var totalLi = $("#scrollNav").find("li").length * 90
-    var totalLi1 = $("#scrollNav1").find("li").length * 90
+    var totalLi = $("#scrollNav").find("li").length * 90;
+    var totalLi1 = $("#scrollNav1").find("li").length * 90;
     $(function () {
         $("#scrollNav,#scrollNav1").css("width", $(window).width() - 60);
-        $(document).on("click", "#scrollNav li", function () {
+        $("#scrollNav li").on("click", function () {
             $(".img_1").attr("src",$(this).find("img").attr("src"))
-        })
-        $(document).on("click", "#scrollNav1 li", function () {
+        }).eq(0).click();
+        $("#scrollNav1 li").on("click", function () {
             $(".img_2").attr("src",$(this).find("img").attr("type"))
-        })
+        }).eq(0).click();
     });
 
     function moveRight() {

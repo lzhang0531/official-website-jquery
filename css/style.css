@@ -1669,7 +1669,7 @@ footer .payment-methods i:hover {
  }
 .tab-triangle-scroll .icon_moveRt {
   right: 0px;
-  padding-right: 10px;
+  padding-left: 10px;
   top: 0;}
 .tab-triangle-scroll .icon_moveLf {
   left: 0px;
