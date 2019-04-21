@@ -5,6 +5,78 @@
     <title>美缝效果展示</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .scrollNav img{
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px #333;
+            width: 70px;
+            height: 70px;
+        }
+        .tab-triangle-scroll ul{
+            padding: 0;
+        }
+        .tab-triangle-scroll .scrollNav {
+            margin-left: 60px;
+            padding: 0;
+        }
+        .tab-triangle-scroll li {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            top: 2px;
+            margin-right: 15px;
+        }
+        .tab-triangle-scroll {
+            position: relative;
+        }
+        .tab-triangle-scroll .scrollNav {
+            overflow: hidden;
+            display: inline-block; }
+        .tab-triangle-scroll .icon_moveLf, .tab-triangle-scroll .icon_moveRt {
+            position: absolute;
+            height: 80px;
+            padding-top: 30px;
+            z-index: 999;
+            width: 60px;
+            background-color: #fff;
+        }
+        .tab-triangle-scroll .icon_moveRt {
+            right: 0;
+            padding-left: 10px;
+            top: 0;}
+        .tab-triangle-scroll .icon_moveLf {
+            left: 0;
+            padding-left: 30px;
+            top: 0;}
+        .tab-triangle-scroll ul {
+            padding-left: 1px;
+            border-bottom: none;
+            height: 80px;
+            white-space: nowrap;
+            width: 10000000px; }
+
+        #scrollNav2{
+            margin-top: 10px;
+        }
+        #scrollNav2 img{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+        #scrollNav2 span {
+            width: 20px;
+            margin: 0 0 0 4px;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            display: inline-block;
+        }
+
+        .view-block{
+            width:243px;height:243px;position:relative;margin:0 auto;
+        }
+        .view-block img{
+            width:243px;height:243px
+        }
+
         .two-col-layout .main-right {float: left;width: 450px;display: inline-block;}
         .two-col-layout .aside-left {margin-left: 450px;}
     </style>
@@ -26,128 +98,84 @@
         <div class="text-center margin-bottom-20 padding-top-40">
             左右切换可选择更多
         </div>
-        <div class="tab-triangle-scroll">
-            <i class="fa fa-chevron-left icon_moveLf" onclick="moveLeft()"></i>
-            <div id="scrollNav" class="scrollNav">
-                <ul>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/3.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/4.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="img/show/5.jpg" alt="">
-                    </li>
-                </ul>
-            </div>
-            <i class="fa fa-chevron-right icon_moveRt" onclick="moveRight()"></i>
-        </div>
-        <div class="tab-triangle-scroll">
-            <i class="fa fa-chevron-left icon_moveLf" onclick="moveLeft1()"></i>
+        <div class="tab-triangle-scroll" type="1">
+            <i class="fa fa-chevron-left icon_moveLf">
+                <img src="img/show/left.png" alt="" style="width: 9px">
+            </i>
             <div id="scrollNav1" class="scrollNav">
+                <ul></ul>
+            </div>
+            <i class="fa fa-chevron-right icon_moveRt">
+                <img src="img/show/right.png" alt="" style="width: 9px">
+            </i>
+        </div>
+        <div class="tab-triangle-scroll" type="2">
+            <i class="fa fa-chevron-left icon_moveLf">
+                <img src="img/show/left.png" alt="" style="width: 9px">
+            </i>
+            <div id="scrollNav2" class="scrollNav">
                 <ul>
-                    <li>
-                        <img src="img/show/color/1.png" alt="" type="img/show/slide/1.png">
-                        <span>纯白色</span>
-                    </li>
-                    <li>
-                        <img src="img/show/color/3.png" alt="" type="img/show/slide/3.png">
-                        <span>水晶银</span>
-                    </li>
-                    <li>
-                        <img src="img/show/color/5.png" alt="" type="img/show/slide/5.png">
-                        <span>柔光金</span>
-                    </li>
                 </ul>
             </div>
-            <i class="fa fa-chevron-right icon_moveRt" onclick="moveRight1()"></i>
+            <i class="fa fa-chevron-right icon_moveRt">
+                <img src="img/show/right.png" alt="" style="width: 9px">
+            </i>
         </div>
     </div>
 </div>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script>
-    var srollLength = 90;//滚动距离
-    var totalLi = $("#scrollNav").find("li").length * 90;
-    var totalLi1 = $("#scrollNav1").find("li").length * 90;
-    var rightWidth = $(window).width() - 450 - 60;
+    var srollLength = 85;//滚动距离
     $(function () {
-        $("#scrollNav,#scrollNav1").css("width", rightWidth);
-        $("#scrollNav li").on("click", function () {
+        for(var i = 1;i<31;i++){
+            $("#scrollNav1 ul").append('<li><img src="img/show/ceramic/'+i+'.jpg" alt=""></li>')
+        }
+        var colorList = ['瓷白色','古铜金','贵族金','贵族银','黑褐色','黑沙金','金属灰','咖啡棕','镏金色','玫瑰金','闪亮金','闪光银','奢华金','深灰色','深米黄','香槟金','香草金','象牙白','象牙金','亚浅灰','月光银','钻石金'];
+        $.each(colorList,function (i,item) {
+            $("#scrollNav2 ul").append('<li><img src="img/show/color/'+item+'.png" alt="" type="img/show/slide/'+item+'.png"><span>'+item+'</span></li>')
+        })
+        $("#scrollNav1,#scrollNav2").css("width", $(window).width() - 510);
+        $("#scrollNav1 li").on("click", function () {
             $(".img_1").attr("src",$(this).find("img").attr("src"))
         }).eq(0).click();
-        $("#scrollNav1 li").on("click", function () {
+        $("#scrollNav2 li").on("click", function () {
             $(".img_2").attr("src",$(this).find("img").attr("type"))
         }).eq(0).click();
+        $(".icon_moveRt").click(function () {
+            moveRight($(this).parent().attr("type"))
+        });
+        $(".icon_moveLf").click(function () {
+            moveLeft($(this).parent().attr("type"))
+        });
+        function moveRight(type) {
+            var totalLi = type === '1' ? 2700 : 1980;
+            var scrollLeft = document.getElementById("scrollNav"+type).scrollLeft;
+            var scrollNavWidth = $("#scrollNav"+type).width();
+            if (totalLi - scrollLeft -scrollNavWidth > srollLength) {
+                document.getElementById("scrollNav"+type).scrollLeft += srollLength;
+            } else if (totalLi > scrollNavWidth + scrollLeft && totalLi < (scrollNavWidth + srollLength + scrollLeft)) {
+                document.getElementById("scrollNav"+type).scrollLeft = totalLi - scrollNavWidth + 40;
+            } else {
+                alert("已滑动到最右边");
+                return false
+            }
+        }
+        function moveLeft(type) {
+            var scrollLeft = document.getElementById("scrollNav"+type).scrollLeft;
+            if (scrollLeft === 0) {
+                alert("已滑动到最左边");
+                return false
+            } else if (scrollLeft < srollLength) {
+                document.getElementById("scrollNav"+type).scrollLeft = 0;
+            } else {
+                document.getElementById("scrollNav"+type).scrollLeft -= srollLength;
+            }
+        }
     });
 
-    function moveRight() {
-        var scrollLeft = document.getElementById("scrollNav").scrollLeft;
-        if (totalLi - scrollLeft > $("#scrollNav").width() + srollLength) {
-            document.getElementById("scrollNav").scrollLeft += srollLength;
-        } else if (totalLi - scrollLeft > $("#scrollNav").width() && totalLi - scrollLeft < $("#scrollNav").width() + srollLength) {
-            document.getElementById("scrollNav").scrollLeft = totalLi - $("#scrollNav").width() + 40;
-        } else {
-            alert("已滑动到最右边");
-            return false
-        }
-    }
 
-    function moveLeft() {
-        var scrollLeft = document.getElementById("scrollNav").scrollLeft;
-        if (scrollLeft == 0) {
-            alert("已滑动到最左边");
-            return false
-        } else if (scrollLeft < srollLength) {
-            document.getElementById("scrollNav").scrollLeft = 0;
-        } else {
-            document.getElementById("scrollNav").scrollLeft -= srollLength;
-        }
-    }
 
-    function moveRight1() {
+    /*function moveRight1() {
         var scrollLeft = document.getElementById("scrollNav1").scrollLeft;
         if (totalLi1 - scrollLeft > $("#scrollNav1").width() + srollLength) {
             document.getElementById("scrollNav1").scrollLeft += srollLength;
@@ -169,7 +197,7 @@
         } else {
             document.getElementById("scrollNav1").scrollLeft -= srollLength;
         }
-    }
+    }*/
 </script>
 </body>
 </html>
