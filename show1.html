@@ -110,10 +110,11 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script>
     var srollLength = 90;//滚动距离
-    var totalLi = $("#scrollNav").find("li").length * 90
-    var totalLi1 = $("#scrollNav1").find("li").length * 90
+    var totalLi = $("#scrollNav").find("li").length * 90;
+    var totalLi1 = $("#scrollNav1").find("li").length * 90;
+    var rightWidth = $(window).width() - 450 - 60;
     $(function () {
-        $("#scrollNav,#scrollNav1").css("width", $(".main-left").width() - 60);
+        $("#scrollNav,#scrollNav1").css("width", rightWidth);
         $("#scrollNav li").on("click", function () {
             $(".img_1").attr("src",$(this).find("img").attr("src"))
         }).eq(0).click();
